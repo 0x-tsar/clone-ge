@@ -10,7 +10,7 @@ export const Banner = () => {
   // });
 
   // const [num, setNum] = useState(1);
-
+  // bpsc
   // useEffect(() => {
   //   setInterval(() => {
   //     // setState((currentState) => ({ state: currentState.state + 1 }));
@@ -72,7 +72,6 @@ export const Banner = () => {
     /* top: calc(100% - 500px); */
 
     top: 60%;
-}
 
     /* top: 50%; */
     /* left: 100px; */

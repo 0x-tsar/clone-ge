@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Image from "next/image";
+import Link from "next/link";
 
 export const Container = styled.div`
   display: flex;
@@ -46,7 +47,7 @@ const GameReports = () => {
     <Container>
       {new Array(1, 2, 3, 4, 5, 6).map((item, key) => {
         return (
-          <Holder>
+          <Holder key={key}>
             <VideoH>
               <img
                 width="100%"
@@ -54,47 +55,49 @@ const GameReports = () => {
                 style={{ backgroundColor: "black" }}
               />
             </VideoH>
-            <p
-              className="clubName"
-              style={{
-                gridArea: "clubname",
-                marginTop: "30px",
-                color: "#333333",
-              }}
-            >
-              São Paulo
-              <h2
-                className="clubNews"
-                style={{ gridArea: "clubnews", color: "#06aa48" }}
-              >
-                São Paulo vence o Sport e se distancia do Z4.
-              </h2>
-              <p
-                className="descGame"
-                style={{
-                  gridArea: "description",
-                  fontSize: "17px",
-                  color: "#1ec661",
-                  cursor: "pointer",
-                }}
-              >
-                <span style={{ color: "#333333", fontSize: "20px" }}>
-                  &#8226;
-                </span>{" "}
-                Lorem Ipsum - это текст-"рыба", часто используемый в печати и
-                вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для
-                текстов на латинице с начала XVI века. В то время некий
-                безымянный печатник создал большую коллекцию размеров и форм
-                шрифтов.
-              </p>
-            </p>
 
-            {/* <Description>
-              Lorem Ipsum - это текст-"рыба", часто используемый в печати и
-              вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов
-              на латинице с начала XVI века. В то время некий безымянный
-              печатник создал большую коллекцию размеров и форм шрифтов,
-            </Description> */}
+            <Link href="/club">
+              <a>
+                <p
+                  className="clubName"
+                  style={{
+                    gridArea: "clubname",
+                    marginTop: "30px",
+                    color: "#333333",
+                  }}
+                >
+                  Loren Ipson
+                </p>
+                <h2
+                  className="clubNews"
+                  style={{
+                    gridArea: "clubnews",
+                    color: "#06aa48",
+                    cursor: "pointer",
+                  }}
+                >
+                  Lorem Ipsum - это текст-"рыба{" "}
+                </h2>
+                <p
+                  className="descGame"
+                  style={{
+                    gridArea: "description",
+                    fontSize: "17px",
+                    color: "#1ec661",
+                    cursor: "pointer",
+                  }}
+                >
+                  <span style={{ color: "#333333", fontSize: "20px" }}>
+                    &#8226;
+                  </span>{" "}
+                  Lorem Ipsum - это текст-"рыба", часто используемый в печати и
+                  вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для
+                  текстов на латинице с начала XVI века. В то время некий
+                  безымянный печатник создал большую коллекцию размеров и форм
+                  шрифтов.
+                </p>
+              </a>
+            </Link>
           </Holder>
         );
       })}

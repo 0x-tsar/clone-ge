@@ -36,7 +36,7 @@ const EachClub = () => {
     <Container>
       {clubs.map((item, key) => {
         return (
-          <ChaqueClub>
+          <ChaqueClub key={key}>
             <P2>{item.position}</P2>
             <img
               width="35px"

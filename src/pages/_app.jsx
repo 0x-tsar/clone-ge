@@ -4,6 +4,9 @@ import Header2 from "./components/Header2";
 import styled from "styled-components";
 import Banner from "./components/Banner";
 import News from "./components/News";
+import { useContext, useEffect, useState } from "react";
+
+// import Club from "./club";
 
 export const Container = styled.div`
   display: grid;
@@ -20,15 +23,16 @@ export const Container = styled.div`
 // row height
 
 function MyApp({ Component, pageProps }) {
+  
   return (
-    <Container>
-      <Header1></Header1>
-      <Header2></Header2>
-      <Banner></Banner>
-      <News></News>
+      <Container>
+        <Header1></Header1>
+        <Header2></Header2>
+        <Banner></Banner>
+        <News></News>
 
-      {/* <Component {...pageProps} /> */}
-    </Container>
+        {/* <Component {...pageProps} /> */}
+      </Container>
   );
 }
 

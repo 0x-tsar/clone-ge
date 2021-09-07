@@ -9,7 +9,6 @@ import styled from "styled-components";
 export const Container = styled.div`
   background-color: #06aa48;
   grid-area: header2;
-
   display: flex;
   align-items: center;
   color: white;
@@ -22,22 +21,37 @@ export const Logo = styled.h1`
 `;
 
 export const Holder = styled.div`
-  width: 50%;
+  /* width: 50%; */
   display: flex;
   justify-content: center;
   margin-bottom: 10px;
 `;
 
+export const Menus = styled.div`
+  background-color: blue;
+`;
+
+export const Div = styled.div`
+  background-color: red;
+
+  /* :hover {
+    :nth-child(1) {
+      background-color: blue;
+    }
+  } */
+`;
+
 const Header2 = () => {
   return (
     <Container>
-      <div
+      {/* <Div
+        onMouseEnter={() => {}}
+        onMouseOut={() => {}}
         style={{
           marginRight: "20px",
           // marginLeft: "20px",
           fontSize: "18px",
           cursor: "pointer",
-
           // width: "100%",
           // display: "flex",
           paddingLeft: "310px",
@@ -45,18 +59,15 @@ const Header2 = () => {
         }}
       >
         Menu
-      </div>
-      <div style={{ marginRight: "10px", fontSize: "18px", cursor: "pointer" }}>
+      </Div>
+
+      <Div style={{ marginRight: "10px", fontSize: "18px", cursor: "pointer" }}>
         Times
-      </div>
+      </Div> */}
 
       <Holder>
         <Logo>ge</Logo>
       </Holder>
-
-      {/* <img src={logo}></img> */}
-
-      {/* <Logo src={logo} /> */}
     </Container>
   );
 };
