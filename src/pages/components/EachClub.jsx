@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import ScoreGames from "./ScoreGames";
-import clubs from "./clubs";
+import clubs from "./Clubs";
 
 export const Container = styled.div``;
 

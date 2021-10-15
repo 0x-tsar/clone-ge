@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 // import { logo } from "../../../public/ge_logo.png";
 // import logo from "./ge_logo.png";
@@ -22,48 +22,71 @@ export const Logo = styled.h1`
 
 export const Holder = styled.div`
   /* width: 50%; */
+  width: 100%;
   display: flex;
   justify-content: center;
   margin-bottom: 10px;
 `;
 
 export const Menus = styled.div`
-  background-color: blue;
-`;
-
-export const Div = styled.div`
-  background-color: red;
+  /* background-color: blue; */
+  /* padding-left: 100px; */
+  /* margin-left: 100px; */
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
 
   /* :hover {
-    :nth-child(1) {
-      background-color: blue;
-    }
+    background-color: black;
   } */
 `;
 
+export const LittleWindow = styled.div`
+  width: 330px;
+  height: 320px;
+  background-color: white;
+  border-radius: 2px;
+  z-index: 0;
+  position: absolute;
+  left: 90px;
+  top: 110px;
+  border: 1px solid #00000057;
+  display: ${(props) => (props.windowVisibility ? "block" : "none")};
+
+  /* transform: translate(1px, 2px);
+  animation-duration: 4s;
+  transition-duration: 4s; */
+`;
+
+// export const Div = styled.div`
+//   background-color: red;
+
+//   /* :hover {
+//     :nth-child(1) {
+//       background-color: blue;
+//     }
+//   } */
+// `;
+
 const Header2 = () => {
+  const [windowVisibility, setWindowVisibility] = useState(false);
+
   return (
     <Container>
-      {/* <Div
-        onMouseEnter={() => {}}
-        onMouseOut={() => {}}
-        style={{
-          marginRight: "20px",
-          // marginLeft: "20px",
-          fontSize: "18px",
-          cursor: "pointer",
-          // width: "100%",
-          // display: "flex",
-          paddingLeft: "310px",
-          // flexDirection: "row",
+      <Menus>Menu</Menus>
+      <Menus
+        onMouseEnter={() => {
+          setWindowVisibility(true);
+        }}
+        onMouseLeave={() => {
+          setWindowVisibility(false);
         }}
       >
-        Menu
-      </Div>
-
-      <Div style={{ marginRight: "10px", fontSize: "18px", cursor: "pointer" }}>
         Times
-      </Div> */}
+      </Menus>
+
+      <LittleWindow windowVisibility={windowVisibility} />
 
       <Holder>
         <Logo>ge</Logo>

@@ -1,3 +1,11 @@
+import React from "react";
+
+const Context = () => {
+  return <div></div>;
+};
+
+export default Context;
+
 // import React, { useEffect, useState } from "react";
 
 // export const AuthContext = React.createContext({});

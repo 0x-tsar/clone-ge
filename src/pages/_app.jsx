@@ -22,17 +22,16 @@ export const Container = styled.div`
 // columns width
 // row height
 
-function MyApp({ Component, pageProps }) {
-  
+export function MyApp({ Component, pageProps }) {
   return (
-      <Container>
-        <Header1></Header1>
-        <Header2></Header2>
-        <Banner></Banner>
-        <News></News>
+    <Container>
+      <Header1></Header1>
+      <Header2></Header2>
+      <Banner></Banner>
+      <News></News>
 
-        {/* <Component {...pageProps} /> */}
-      </Container>
+      {/* <Component {...pageProps} /> */}
+    </Container>
   );
 }
 

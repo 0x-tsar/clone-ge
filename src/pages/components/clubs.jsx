@@ -1,4 +1,6 @@
-const clubs = [
+import React from 'react'
+
+export const Clubs = [
   {
     name: "SAO",
     position: 1,
@@ -36,4 +38,12 @@ const clubs = [
   },
 ];
 
-export default clubs;
+const Clubss = () => {
+  return (
+    <div>
+      
+    </div>
+  )
+}
+
+export default Clubs;
